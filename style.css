@@ -5,40 +5,35 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: #5a4a42;
+    background-color: #fff5f5;
     overflow-x: hidden;
 }
 
-/* 炫酷的渐变背景 */
+/* ===== 可爱风 Hero 区域 ===== */
 .hero-section {
     height: 100vh;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+    background: linear-gradient(135deg, #ffc3d0 0%, #d4a5ff 30%, #a8e6cf 60%, #ffd3b6 100%);
+    background-size: 300% 300%;
+    animation: gradientBG 12s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #5a4a42;
     position: relative;
     overflow: hidden;
 }
 
 @keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
+/* 可爱圆点背景 */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -46,7 +41,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,%3Csvg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z" fill="%23ffffff" fill-opacity="0.1" fill-rule="evenodd"/%3E%3C/svg%3E');
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 11%),
+        radial-gradient(circle, rgba(255,255,255,0.2) 8%, transparent 9%);
+    background-size: 60px 60px, 40px 40px;
+    background-position: 0 0, 30px 30px;
     z-index: 1;
 }
 
@@ -58,43 +57,53 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease-out;
+    color: #5a4a42;
 }
 
 .hero-content .name {
-    color: #ffd700;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    color: #e8789a;
     display: inline-block;
-    animation: glow 2s ease-in-out infinite alternate;
+    position: relative;
 }
 
-@keyframes glow {
-    from {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ffd700, 0 0 20px #ffd700;
-    }
-    to {
-        text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ffd700, 0 0 40px #ffd700;
-    }
+/* 名字下方的可爱波浪线 */
+.hero-content .name::after {
+    content: '♡';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #e8789a;
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.3); }
 }
 
 .contact-info {
     font-size: 1rem;
     margin-top: 15px;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 24px;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
     display: inline-block;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px dashed rgba(232, 120, 154, 0.4);
     animation: fadeInUp 1s ease-out 0.3s both;
+    color: #7a6a62;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     animation: fadeInUp 1s ease-out 0.2s both;
+    color: #6a5a52;
 }
 
 .hero-buttons {
@@ -102,43 +111,45 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #ffb6c1 0%, #ff9fb5 100%);
     color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 30px;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    padding: 14px 28px;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     margin-right: 15px;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 4px 15px rgba(232, 120, 154, 0.3);
     transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(232, 120, 154, 0.4);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 10px 22px;
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #e8789a;
+    border: 3px solid rgba(232, 120, 154, 0.5);
+    padding: 12px 26px;
+    border-radius: 50px;
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
 }
 
 .btn-secondary:hover {
     background: white;
-    color: #667eea;
-    transform: translateY(-3px);
+    color: #e8789a;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(232, 120, 154, 0.25);
 }
 
-/* 通用 section 样式 */
+/* ===== 通用 section 样式 ===== */
 section {
     padding: 100px 20px;
     max-width: 1200px;
@@ -146,30 +157,30 @@ section {
 }
 
 section h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     text-align: center;
     margin-bottom: 50px;
-    color: #333;
+    color: #5a4a42;
     position: relative;
 }
 
 section h2::after {
-    content: '';
+    content: '♡ ♡ ♡';
     display: block;
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    letter-spacing: 8px;
+    color: #e8789a;
     margin: 15px auto;
-    border-radius: 2px;
+    font-size: 0.9rem;
 }
 
-/* 关于我部分 */
+/* ===== 关于我部分 ===== */
 .about-section {
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(232, 120, 154, 0.1);
     margin: 50px auto;
     padding: 50px;
+    border: 2px solid rgba(232, 120, 154, 0.15);
 }
 
 .about-content p {
@@ -177,6 +188,7 @@ section h2::after {
     line-height: 1.8;
     margin-bottom: 30px;
     text-align: center;
+    color: #6a5a52;
 }
 
 .personal-stats {
@@ -189,37 +201,40 @@ section h2::after {
 .stat-item {
     text-align: center;
     margin: 20px;
-    padding: 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    padding: 24px;
+    background: linear-gradient(135deg, #fff0f3 0%, #fce4f0 100%);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(232, 120, 154, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(232, 120, 154, 0.15);
 }
 
 .stat-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 12px 30px rgba(232, 120, 154, 0.2);
 }
 
 .stat-number {
     display: block;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #667eea;
+    color: #e8789a;
     margin-bottom: 10px;
 }
 
 .stat-label {
     font-size: 1rem;
-    color: #666;
+    color: #8a7a72;
 }
 
-/* 兴趣爱好部分 */
+/* ===== 兴趣爱好部分 ===== */
 .hobbies-section {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #fff9fb 0%, #f5f0ff 100%);
     margin: 50px auto;
-    border-radius: 10px;
+    border-radius: 24px;
     padding: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(180, 140, 200, 0.1);
+    border: 2px solid rgba(180, 140, 200, 0.15);
 }
 
 .hobbies-grid {
@@ -232,48 +247,68 @@ section h2::after {
 .hobby-card {
     background: white;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(232, 120, 154, 0.08);
     text-align: center;
     transition: all 0.3s ease;
-    border-top: 4px solid #667eea;
+    border: 2px solid rgba(232, 120, 154, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ffb6c1, #d4a5ff, #a8e6cf, #ffd3b6);
+    border-radius: 20px 20px 0 0;
 }
 
 .hobby-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 15px 35px rgba(232, 120, 154, 0.18);
 }
 
 .hobby-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.2) rotate(10deg);
 }
 
 .hobby-card h3 {
     font-size: 1.3rem;
     margin-bottom: 15px;
-    color: #333;
+    color: #5a4a42;
 }
 
 .hobby-card p {
-    color: #666;
+    color: #8a7a72;
     line-height: 1.6;
 }
 
-/* 美食爱好者部分 */
+/* ===== 美食爱好者部分 ===== */
 .food-section {
     background: white;
     margin: 50px auto;
-    border-radius: 10px;
+    border-radius: 24px;
     padding: 50px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 30px rgba(255, 179, 139, 0.1);
+    border: 2px solid rgba(255, 179, 139, 0.15);
     text-align: center;
 }
 
 .food-section p {
     font-size: 1.1rem;
     margin-bottom: 40px;
-    color: #666;
+    color: #8a7a72;
 }
 
 .food-grid {
@@ -284,14 +319,16 @@ section h2::after {
 
 .food-item {
     position: relative;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 179, 139, 0.15);
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 179, 139, 0.2);
 }
 
 .food-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(255, 179, 139, 0.25);
 }
 
 .food-item img {
@@ -310,23 +347,25 @@ section h2::after {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(transparent, rgba(232, 120, 154, 0.85));
     color: white;
-    padding: 15px;
+    padding: 20px 15px 15px;
     margin: 0;
     font-size: 1.2rem;
+    border-radius: 0 0 17px 17px;
 }
 
-/* 页脚 */
+/* ===== 页脚 ===== */
 .footer {
-    background: #333;
-    color: white;
+    background: linear-gradient(135deg, #ffc3d0 0%, #d4a5ff 100%);
+    color: #5a4a42;
     text-align: center;
     padding: 30px;
     margin-top: 50px;
+    font-size: 0.95rem;
 }
 
-/* 动画效果 */
+/* ===== 动画效果 ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -338,46 +377,46 @@ section h2::after {
     }
 }
 
-/* 响应式设计 */
+/* ===== 响应式设计 ===== */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
-    
+
     section {
         padding: 50px 20px;
     }
-    
+
     .about-section,
     .hobbies-section,
     .food-section {
         padding: 30px;
     }
-    
+
     .personal-stats {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .stat-item {
         width: 80%;
         max-width: 300px;
     }
-    
+
     .hero-buttons {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .btn-primary {
         margin-right: 0;
         margin-bottom: 15px;
-        width: 200px;
+        width: 220px;
     }
-    
+
     .btn-secondary {
-        width: 200px;
+        width: 220px;
     }
 }
 
@@ -385,11 +424,11 @@ section h2::after {
     .hero-content h1 {
         font-size: 2rem;
     }
-    
+
     section h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
-    
+
     .hobbies-grid,
     .food-grid {
         grid-template-columns: 1fr;
