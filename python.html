@@ -33,6 +33,7 @@
             <li><a href="#ch8" class="chapter-link" data-chapter="8">8. 字典与集合</a></li>
             <li><a href="#ch9" class="chapter-link" data-chapter="9">9. 字符串操作</a></li>
             <li><a href="#ch10" class="chapter-link" data-chapter="10">10. 文件操作</a></li>
+            <li><a href="#ch11" class="chapter-link" data-chapter="11">11. Python基础大纲</a></li>
         </ul>
     </aside>
 
@@ -663,6 +664,147 @@ with open("test.txt", "r", encoding="utf-8") as f:
             </div>
             <div class="chapter-nav">
                 <a href="#ch9" class="nav-prev">← 上一章：字符串操作</a>
+                <a href="#ch11" class="nav-next">下一章：Python基础大纲 →</a>
+            </div>
+        </section>
+
+        <!-- 第11章 -->
+        <section class="chapter" id="ch11">
+            <div class="chapter-badge">第 11 章</div>
+            <h2>Python 基础学习大纲</h2>
+            <div class="chapter-body">
+                <div class="outline-header">
+                    <p class="outline-subtitle">2026年AI时代重构版</p>
+                    <p>在2026年的今天，Python基础学习已从单纯的语法掌握转变为构建与智能工具协同工作的核心能力。本大纲融合了传统教学精华与AI时代新需求，为初学者设计了一条高效、实用、面向未来的学习路径。</p>
+                </div>
+
+                <h3>一、学习理念与目标重构</h3>
+                <p>传统Python教学往往陷入"语法驱动"的困境，而AI时代要求我们重新定义学习目标：从"掌握编程语言"升维为<strong>"培养利用计算思维解决实际问题的能力"</strong>。这意味着学习重点应放在问题分解、模式识别、抽象思维以及与AI工具的协同工作流上。对于商务数据分析等专业学生，Python更是连接业务洞察与技术实现的核心枢纽。</p>
+
+                <h3>二、阶段一：环境搭建与核心语法奠基（1-2周）</h3>
+
+                <div class="outline-section">
+                    <h4>📖 第一章：Python认知与环境配置</h4>
+                    <p class="outline-goal">学习目标：破除技术恐惧，成功运行第一个程序。</p>
+                    <ul>
+                        <li><strong>Python概述：</strong>了解Python的起源、特点（简洁易读、解释型、动态类型）及其在数据分析、AI、自动化等领域的核心地位。</li>
+                        <li><strong>开发环境搭建：</strong>掌握Python安装（推荐Python 3.x版本），配置环境变量。强烈推荐使用Anaconda发行版，它集成了Python、Jupyter Notebook及数据分析必备库，能完美避开初期环境配置的困扰。</li>
+                        <li><strong>第一个程序：</strong>在IDE（如PyCharm、VS Code）或Jupyter Notebook中成功运行 <code>print("Hello, World!")</code>，理解交互式与脚本式编程的区别。</li>
+                    </ul>
+                </div>
+
+                <div class="outline-section">
+                    <h4>📖 第二章：基础语法与数据处理核心</h4>
+                    <p class="outline-goal">学习目标：掌握编程最必要的"积木"，并立即应用于数据上下文。</p>
+                    <ul>
+                        <li><strong>变量与数据类型：</strong>理解变量是存储数据的容器。聚焦三大核心类型：数值型（int, float，用于计算）、字符串（str，用于处理文本）、布尔值（bool，用于逻辑判断）。学习类型转换（int(), str(), float()）。</li>
+                        <li><strong>输入与输出：</strong>掌握 input() 获取用户输入（返回字符串）和 print() 进行输出，特别是使用f-string进行格式化输出。</li>
+                        <li><strong>运算符：</strong>掌握算术、比较、逻辑运算符，理解运算符优先级。</li>
+                        <li><strong>流程控制——程序的逻辑骨架：</strong>
+                            <ul>
+                                <li>条件判断：if-elif-else 结构。案例：根据销售额判断业绩等级。</li>
+                                <li>循环：for 循环（遍历序列）和 while 循环（条件循环）。使用 break 和 continue 控制循环流程。</li>
+                            </ul>
+                        </li>
+                        <li><strong>核心数据结构——数据的容器：</strong>这是数据分析的基石，需重点攻克。
+                            <ul>
+                                <li>列表：有序可变集合。精通索引、切片、遍历及常用方法（append(), insert(), remove(), sort()）。案例：存储月度销售额列表。</li>
+                                <li>字典：键值对映射。掌握通过键访问值、增删改查操作。案例：存储商品信息 {'商品ID': 'A001', '价格': 299}。</li>
+                                <li>注：元组和集合在此阶段仅作概念性了解，明确列表和字典的核心地位。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <h3>三、阶段二：代码模块化与数据生态接入（2-3周）</h3>
+
+                <div class="outline-section">
+                    <h4>📖 第三章：函数与代码复用</h4>
+                    <p class="outline-goal">学习目标：学会封装代码，提升可读性与复用性。</p>
+                    <ul>
+                        <li><strong>函数定义与调用：</strong>使用 def 关键字定义函数，理解参数传递与返回值。</li>
+                        <li><strong>参数详解：</strong>掌握位置参数、默认参数，了解可变参数（*args）和关键字参数（**kwargs）的概念。</li>
+                        <li><strong>作用域：</strong>理解局部变量与全局变量的区别。</li>
+                    </ul>
+                </div>
+
+                <div class="outline-section">
+                    <h4>📖 第四章：文件操作与模块</h4>
+                    <p class="outline-goal">学习目标：实现程序与外部数据的交互，并利用现有代码库。</p>
+                    <ul>
+                        <li><strong>文件操作：</strong>学习使用 open() 函数和 with 上下文管理器安全地读写文本文件及 CSV文件。这是从外部获取数据的关键步骤。</li>
+                        <li><strong>模块与包：</strong>理解模块（.py文件）和包（包含__init__.py的目录）的概念。学习使用 import 导入标准库（如 math, random, os）和第三方模块。</li>
+                    </ul>
+                </div>
+
+                <div class="outline-section">
+                    <h4>📖 第五章：初探数据分析核心库</h4>
+                    <p class="outline-goal">学习目标：将Python语法知识转化为实用的数据分析能力。</p>
+                    <ul>
+                        <li><strong>Pandas核心：</strong>尽早接触数据分析的"神器"。理解 Series 和 DataFrame 数据结构，掌握数据读取（read_csv）、查看、筛选、分组聚合（groupby）等核心操作。</li>
+                        <li><strong>NumPy基础：</strong>了解其高效数组运算能力，是许多科学计算库的基础。</li>
+                        <li><strong>可视化启蒙：</strong>使用 Matplotlib 绘制基本的折线图、柱状图，用于展示数据趋势和对比。</li>
+                    </ul>
+                </div>
+
+                <h3>四、阶段三：实战进阶与AI协同（持续进行）</h3>
+
+                <div class="outline-section">
+                    <h4>📖 第六章：面向对象编程（OOP）入门</h4>
+                    <p class="outline-goal">学习目标：理解面向对象思想，为阅读和构建复杂项目打下基础。</p>
+                    <ul>
+                        <li><strong>类与对象：</strong>理解类（蓝图）与对象（实例）的关系。掌握定义类、属性和方法。</li>
+                        <li><strong>构造器与继承：</strong>了解 __init__() 方法，理解继承的基本概念。</li>
+                    </ul>
+                </div>
+
+                <div class="outline-section">
+                    <h4>📖 第七章：错误处理与程序健壮性</h4>
+                    <p class="outline-goal">学习目标：让程序能优雅地应对意外。</p>
+                    <ul>
+                        <li><strong>异常处理：</strong>使用 try-except-finally 结构捕获和处理运行时错误。</li>
+                    </ul>
+                </div>
+
+                <div class="outline-section">
+                    <h4>📖 第八章：项目实战与AI协作</h4>
+                    <p class="outline-goal">学习目标：整合所有知识，解决真实问题，并培养与AI协作的现代工作流。</p>
+                    <ul>
+                        <li><strong>核心实战项目：电商销售数据分析</strong>
+                            <ul>
+                                <li>数据加载与探索：使用Pandas加载CSV格式的销售数据。</li>
+                                <li>数据清洗：处理缺失值、异常值，格式化日期。</li>
+                                <li>业务分析：计算GMV、客单价、复购率等关键指标；按地区、品类进行销售排行。</li>
+                                <li>可视化报告：将核心结果用图表呈现，生成分析摘要。</li>
+                            </ul>
+                        </li>
+                        <li><strong>AI协作技能培养：</strong>学习如何向大语言模型精准描述数据分析需求，例如："请用Pandas编写代码，读取sales.csv，计算'华南区'Q2销售额环比增长率，并用Matplotlib生成柱状图。" 进而学习解读、调试和优化AI生成的代码，成为"代码架构师与质检员"。</li>
+                    </ul>
+                </div>
+
+                <h3>五、学习原则与资源建议</h3>
+
+                <div class="outline-section">
+                    <ul>
+                        <li><strong>边学边练：</strong>拒绝只看不练。每个知识点都需通过代码验证。在线评测平台（如LeetCode基础题）和本地项目练习至关重要。</li>
+                        <li><strong>场景化学习：</strong>始终将语法学习与商务数据分析场景结合，例如用列表存储销售记录，用字典管理客户信息，用循环计算总和。</li>
+                        <li><strong>善用资源：</strong>
+                            <ul>
+                                <li>环境：Anaconda + Jupyter Notebook/VSCode。</li>
+                                <li>教程：菜鸟教程、廖雪峰Python教程用于系统查阅。</li>
+                                <li>社区：Stack Overflow、GitHub用于解决问题和参考项目。</li>
+                            </ul>
+                        </li>
+                        <li><strong>选择性深入：</strong>完成上述大纲后，可根据兴趣方向（如Web开发、爬虫、机器学习）进行拓展。</li>
+                    </ul>
+                </div>
+
+                <div class="congrats-box">
+                    <p>🌟 本大纲以"快速构建最小可行能力 → 实战应用 → 按需深化"为路径，确保您能以最高效的方式掌握在AI时代利用Python进行数据处理与分析的必备技能，为您的专业学习和职业发展奠定坚实基石。</p>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch10" class="nav-prev">← 上一章：文件操作</a>
                 <a href="index.html" class="nav-next">🏠 返回首页</a>
             </div>
         </section>

@@ -376,6 +376,72 @@ body {
     content: "✅ ";
 }
 
+/* ===== 大纲章节样式 ===== */
+.outline-header {
+    background: linear-gradient(135deg, #ebf8ff, #e9d8fd);
+    border: 2px solid #90cdf4;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.outline-subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2b6cb0;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.outline-header p:last-child {
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.outline-section {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #4299e1;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 16px 0 24px;
+}
+
+.outline-section h4 {
+    font-size: 1.05rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.outline-goal {
+    font-size: 0.9rem;
+    color: #2b6cb0;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding: 4px 0;
+}
+
+.outline-section ul {
+    margin: 8px 0 8px 20px;
+}
+
+.outline-section li {
+    margin-bottom: 8px;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.outline-section ul ul {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.outline-section ul ul li {
+    font-size: 0.92rem;
+    color: #718096;
+}
+
 /* ===== 章节导航 ===== */
 .chapter-nav {
     display: flex;
