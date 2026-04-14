@@ -1,0 +1,506 @@
+/* ===== 基础重置 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    color: #2d3748;
+    background: #f7fafc;
+}
+
+/* ===== 顶部导航栏 ===== */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(135deg, #306998 0%, #FFD43B 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.nav-back {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-back:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+    width: 120px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: white;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 260px;
+    height: calc(100vh - 60px);
+    background: white;
+    border-right: 1px solid #e2e8f0;
+    overflow-y: auto;
+    z-index: 900;
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar.hidden {
+    transform: translateX(-260px);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2d3748;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.sidebar-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #718096;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.sidebar-toggle:hover {
+    background: #f0f0f0;
+}
+
+.chapter-list {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.chapter-list li {
+    margin: 2px 0;
+}
+
+.chapter-link {
+    display: block;
+    padding: 10px 20px;
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.chapter-link:hover {
+    background: #f7fafc;
+    color: #306998;
+    border-left-color: #FFD43B;
+}
+
+.chapter-link.active {
+    background: linear-gradient(90deg, rgba(48, 105, 152, 0.08), transparent);
+    color: #306998;
+    font-weight: 600;
+    border-left-color: #306998;
+}
+
+/* ===== 主内容区 ===== */
+.content {
+    margin-left: 260px;
+    margin-top: 60px;
+    padding: 40px;
+    max-width: 900px;
+    transition: margin-left 0.3s ease;
+}
+
+.content.full-width {
+    margin-left: 0;
+}
+
+/* ===== 章节样式 ===== */
+.chapter {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    animation: fadeInUp 0.5s ease;
+}
+
+.chapter-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #306998, #4B8BBE);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.chapter h2 {
+    font-size: 1.8rem;
+    color: #1a202c;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #FFD43B;
+}
+
+.chapter h3 {
+    font-size: 1.2rem;
+    color: #2d3748;
+    margin: 28px 0 14px;
+    padding-left: 12px;
+    border-left: 4px solid #306998;
+}
+
+.chapter-body p {
+    margin-bottom: 16px;
+    color: #4a5568;
+}
+
+.chapter-body ul {
+    margin: 12px 0 20px 24px;
+}
+
+.chapter-body li {
+    margin-bottom: 8px;
+    color: #4a5568;
+}
+
+.chapter-body code {
+    background: #edf2f7;
+    color: #e53e3e;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+/* ===== 代码块 ===== */
+.code-block {
+    background: #1e1e2e;
+    border-radius: 12px;
+    margin: 16px 0 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #313244;
+    color: #cdd6f4;
+    font-size: 0.85rem;
+}
+
+.code-header span {
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.copy-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #cdd6f4;
+    padding: 4px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.code-block pre {
+    padding: 20px;
+    overflow-x: auto;
+    margin: 0;
+}
+
+.code-block code {
+    color: #cdd6f4;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    background: none;
+    padding: 0;
+}
+
+/* 语法高亮 */
+.code-block .comment { color: #6c7086; font-style: italic; }
+.code-block .keyword { color: #cba6f7; }
+.code-block .string { color: #a6e3a1; }
+.code-block .function { color: #89b4fa; }
+.code-block .number { color: #fab387; }
+.code-block .builtin { color: #f9e2af; }
+.code-block .operator { color: #89dceb; }
+.code-block .decorator { color: #f5c2e7; }
+
+/* ===== 输出块 ===== */
+.output-block {
+    background: #f0fff4;
+    border: 1px solid #c6f6d5;
+    border-left: 4px solid #48bb78;
+    border-radius: 8px;
+    margin: 12px 0 24px;
+    overflow: hidden;
+}
+
+.output-header {
+    background: #c6f6d5;
+    color: #276749;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.output-block pre {
+    padding: 14px 16px;
+    margin: 0;
+    color: #276749;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* ===== 数据类型表格 ===== */
+.type-table {
+    margin: 16px 0 24px;
+    overflow-x: auto;
+}
+
+.type-table table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.type-table th {
+    background: linear-gradient(135deg, #306998, #4B8BBE);
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.type-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+}
+
+.type-table tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+.type-table tr:hover {
+    background: #edf2f7;
+}
+
+/* ===== 恭喜框 ===== */
+.congrats-box {
+    background: linear-gradient(135deg, #fff9db, #fef3c7);
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+
+.congrats-box p {
+    font-size: 1.1rem;
+    color: #92400e;
+    margin-bottom: 12px;
+}
+
+.congrats-box ul {
+    text-align: left;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+.congrats-box li {
+    padding: 4px 0;
+    color: #92400e;
+}
+
+.congrats-box li::before {
+    content: "✅ ";
+}
+
+/* ===== 章节导航 ===== */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.nav-prev, .nav-next {
+    color: #306998;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.nav-prev:hover, .nav-next:hover {
+    background: rgba(48, 105, 152, 0.08);
+}
+
+/* ===== 回到顶部 ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #306998, #FFD43B);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(48, 105, 152, 0.4);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 800;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(48, 105, 152, 0.5);
+}
+
+/* ===== 动画 ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 移动端菜单按钮 ===== */
+.menu-btn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #306998, #4B8BBE);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(48, 105, 152, 0.4);
+    z-index: 800;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-260px);
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .chapter {
+        padding: 24px;
+    }
+
+    .chapter h2 {
+        font-size: 1.4rem;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-title {
+        font-size: 1rem;
+    }
+
+    .progress-bar {
+        width: 80px;
+    }
+
+    .chapter-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-prev, .nav-next {
+        text-align: center;
+        display: block;
+    }
+}

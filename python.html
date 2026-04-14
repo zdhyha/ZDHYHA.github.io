@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 基础学习 - 郑慧妍</title>
+    <link rel="stylesheet" href="python.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">🐍 Python 基础学习</h1>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </nav>
+
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span>📚 目录</span>
+            <button class="sidebar-toggle" id="sidebarToggle">✕</button>
+        </div>
+        <ul class="chapter-list">
+            <li><a href="#ch1" class="chapter-link active" data-chapter="1">1. Python 简介</a></li>
+            <li><a href="#ch2" class="chapter-link" data-chapter="2">2. 变量与数据类型</a></li>
+            <li><a href="#ch3" class="chapter-link" data-chapter="3">3. 运算符</a></li>
+            <li><a href="#ch4" class="chapter-link" data-chapter="4">4. 条件语句</a></li>
+            <li><a href="#ch5" class="chapter-link" data-chapter="5">5. 循环语句</a></li>
+            <li><a href="#ch6" class="chapter-link" data-chapter="6">6. 函数</a></li>
+            <li><a href="#ch7" class="chapter-link" data-chapter="7">7. 列表与元组</a></li>
+            <li><a href="#ch8" class="chapter-link" data-chapter="8">8. 字典与集合</a></li>
+            <li><a href="#ch9" class="chapter-link" data-chapter="9">9. 字符串操作</a></li>
+            <li><a href="#ch10" class="chapter-link" data-chapter="10">10. 文件操作</a></li>
+        </ul>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="content" id="content">
+
+        <!-- 第1章 -->
+        <section class="chapter" id="ch1">
+            <div class="chapter-badge">第 1 章</div>
+            <h2>Python 简介</h2>
+            <div class="chapter-body">
+                <p>Python 是一种简洁、易读、功能强大的编程语言，由 Guido van Rossum 于 1991 年发布。它广泛应用于 Web 开发、数据分析、人工智能、自动化脚本等领域。</p>
+
+                <h3>🐍 为什么学 Python？</h3>
+                <ul>
+                    <li><strong>语法简洁</strong> — 接近自然语言，入门门槛低</li>
+                    <li><strong>生态丰富</strong> — 海量的第三方库和框架</li>
+                    <li><strong>应用广泛</strong> — AI、数据科学、Web、自动化等</li>
+                    <li><strong>社区活跃</strong> — 遇到问题容易找到解决方案</li>
+                </ul>
+
+                <h3>💻 第一个 Python 程序</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>hello.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 这是我的第一个 Python 程序
+print("Hello, World!")
+print("你好，世界！")</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-header">▶ 运行结果</div>
+                    <pre>Hello, World!
+你好，世界！</pre>
+                </div>
+
+                <h3>📌 注释</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>comment.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 这是单行注释
+
+"""
+这是多行注释
+可以写多行内容
+常用于函数或类的说明
+"""</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <span></span>
+                <a href="#ch2" class="nav-next">下一章：变量与数据类型 →</a>
+            </div>
+        </section>
+
+        <!-- 第2章 -->
+        <section class="chapter" id="ch2">
+            <div class="chapter-badge">第 2 章</div>
+            <h2>变量与数据类型</h2>
+            <div class="chapter-body">
+                <p>变量是用来存储数据的"容器"。Python 中不需要声明变量类型，解释器会自动推断。</p>
+
+                <h3>📦 变量赋值</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>variables.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 基本赋值
+name = "郑慧妍"
+age = 20
+height = 172.5
+is_student = True
+
+# 多重赋值
+x, y, z = 1, 2, 3
+
+# 输出变量
+print(f"我叫{name}，今年{age}岁，身高{height}cm")</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-header">▶ 运行结果</div>
+                    <pre>我叫郑慧妍，今年20岁，身高172.5cm</pre>
+                </div>
+
+                <h3>📊 基本数据类型</h3>
+                <div class="type-table">
+                    <table>
+                        <thead>
+                            <tr><th>类型</th><th>关键字</th><th>示例</th><th>说明</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>整数</td><td><code>int</code></td><td><code>42</code></td><td>没有小数部分的数</td></tr>
+                            <tr><td>浮点数</td><td><code>float</code></td><td><code>3.14</code></td><td>带小数部分的数</td></tr>
+                            <tr><td>字符串</td><td><code>str</code></td><td><code>"hello"</code></td><td>文本数据</td></tr>
+                            <tr><td>布尔值</td><td><code>bool</code></td><td><code>True/False</code></td><td>真或假</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>🔄 类型转换</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>type_convert.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 字符串转整数
+num_str = "123"
+num = int(num_str)
+print(num + 1)  # 输出: 124
+
+# 整数转字符串
+age = 20
+msg = "我今年" + str(age) + "岁"
+print(msg)  # 输出: 我今年20岁
+
+# 查看类型
+print(type(3.14))   # &lt;class 'float'&gt;
+print(type("hi"))   # &lt;class 'str'&gt;</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch1" class="nav-prev">← 上一章：Python 简介</a>
+                <a href="#ch3" class="nav-next">下一章：运算符 →</a>
+            </div>
+        </section>
+
+        <!-- 第3章 -->
+        <section class="chapter" id="ch3">
+            <div class="chapter-badge">第 3 章</div>
+            <h2>运算符</h2>
+            <div class="chapter-body">
+                <p>运算符是用于执行运算的符号。Python 支持多种运算符。</p>
+
+                <h3>➕ 算术运算符</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>arithmetic.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">a, b = 10, 3
+
+print(a + b)   # 13   加法
+print(a - b)   # 7    减法
+print(a * b)   # 30   乘法
+print(a / b)   # 3.33 除法
+print(a // b)  # 3    整除
+print(a % b)   # 1    取余
+print(a ** b)  # 1000 幂运算</code></pre>
+                </div>
+
+                <h3>⚖️ 比较运算符</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>compare.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">x, y = 5, 10
+
+print(x == y)  # False  等于
+print(x != y)  # True   不等于
+print(x > y)   # False  大于
+print(x < y)   # True   小于
+print(x >= 5)  # True   大于等于
+print(x <= 4)  # False  小于等于</code></pre>
+                </div>
+
+                <h3>🔗 逻辑运算符</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>logic.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">a, b = True, False
+
+print(a and b)  # False  与（都为True才为True）
+print(a or b)   # True   或（有一个True就为True）
+print(not a)    # False  非（取反）</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch2" class="nav-prev">← 上一章：变量与数据类型</a>
+                <a href="#ch4" class="nav-next">下一章：条件语句 →</a>
+            </div>
+        </section>
+
+        <!-- 第4章 -->
+        <section class="chapter" id="ch4">
+            <div class="chapter-badge">第 4 章</div>
+            <h2>条件语句</h2>
+            <div class="chapter-body">
+                <p>条件语句让程序根据不同条件执行不同的代码块。</p>
+
+                <h3>🔀 if - elif - else</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>condition.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">score = 85
+
+if score >= 90:
+    print("优秀 🌟")
+elif score >= 80:
+    print("良好 👍")
+elif score >= 60:
+    print("及格 ✅")
+else:
+    print("不及格 ❌")</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-header">▶ 运行结果</div>
+                    <pre>良好 👍</pre>
+                </div>
+
+                <h3>🤝 嵌套条件</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>nested.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">age = 20
+has_ticket = True
+
+if age >= 18:
+    if has_ticket:
+        print("可以入场观影 🎬")
+    else:
+        print("请先购票 🎫")
+else:
+    print("未满18岁，不可观看 ⚠️")</code></pre>
+                </div>
+
+                <h3>⚡ 三元表达式</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>ternary.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">age = 20
+status = "成年" if age >= 18 else "未成年"
+print(status)  # 输出: 成年</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch3" class="nav-prev">← 上一章：运算符</a>
+                <a href="#ch5" class="nav-next">下一章：循环语句 →</a>
+            </div>
+        </section>
+
+        <!-- 第5章 -->
+        <section class="chapter" id="ch5">
+            <div class="chapter-badge">第 5 章</div>
+            <h2>循环语句</h2>
+            <div class="chapter-body">
+                <p>循环用于重复执行一段代码。Python 提供 <code>for</code> 和 <code>while</code> 两种循环。</p>
+
+                <h3>🔁 for 循环</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>for_loop.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 遍历列表
+fruits = ["苹果", "香蕉", "橙子"]
+for fruit in fruits:
+    print(f"我喜欢吃{fruit}")
+
+# range() 生成数字序列
+for i in range(5):
+    print(i, end=" ")  # 0 1 2 3 4
+
+# range(起始, 结束, 步长)
+for i in range(1, 10, 2):
+    print(i, end=" ")  # 1 3 5 7 9</code></pre>
+                </div>
+
+                <h3>🔄 while 循环</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>while_loop.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">count = 1
+while count <= 5:
+    print(f"第 {count} 次循环")
+    count += 1</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-header">▶ 运行结果</div>
+                    <pre>第 1 次循环
+第 2 次循环
+第 3 次循环
+第 4 次循环
+第 5 次循环</pre>
+                </div>
+
+                <h3>⏹️ break 和 continue</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>break_continue.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># break: 跳出整个循环
+for i in range(10):
+    if i == 5:
+        break
+    print(i, end=" ")  # 0 1 2 3 4
+
+print()
+
+# continue: 跳过本次循环
+for i in range(5):
+    if i == 2:
+        continue
+    print(i, end=" ")  # 0 1 3 4</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch4" class="nav-prev">← 上一章：条件语句</a>
+                <a href="#ch6" class="nav-next">下一章：函数 →</a>
+            </div>
+        </section>
+
+        <!-- 第6章 -->
+        <section class="chapter" id="ch6">
+            <div class="chapter-badge">第 6 章</div>
+            <h2>函数</h2>
+            <div class="chapter-body">
+                <p>函数是一段可重复使用的代码块，用于完成特定任务。</p>
+
+                <h3>📐 定义和调用函数</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>function.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 定义函数
+def greet(name):
+    """向指定的人打招呼"""
+    print(f"你好，{name}！欢迎学习 Python 🐍")
+
+# 调用函数
+greet("慧妍")
+greet("小明")</code></pre>
+                </div>
+                <div class="output-block">
+                    <div class="output-header">▶ 运行结果</div>
+                    <pre>你好，慧妍！欢迎学习 Python 🐍
+你好，小明！欢迎学习 Python 🐍</pre>
+                </div>
+
+                <h3>📥 参数与返回值</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>params.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 默认参数
+def introduce(name, age=20, city="韶关"):
+    print(f"我叫{name}，{age}岁，来自{city}")
+
+introduce("慧妍")              # 我叫慧妍，20岁，来自韶关
+introduce("小明", 22, "广州")  # 我叫小明，22岁，来自广州
+
+# 返回值
+def add(a, b):
+    return a + b
+
+result = add(3, 5)
+print(f"3 + 5 = {result}")  # 3 + 5 = 8</code></pre>
+                </div>
+
+                <h3>🧩 Lambda 匿名函数</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>lambda.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># lambda 表达式
+square = lambda x: x ** 2
+print(square(5))  # 25
+
+# 配合 sorted 使用
+students = [("慧妍", 85), ("小明", 92), ("小红", 78)]
+sorted_students = sorted(students, key=lambda s: s[1], reverse=True)
+print(sorted_students)  # [('小明', 92), ('慧妍', 85), ('小红', 78)]</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch5" class="nav-prev">← 上一章：循环语句</a>
+                <a href="#ch7" class="nav-next">下一章：列表与元组 →</a>
+            </div>
+        </section>
+
+        <!-- 第7章 -->
+        <section class="chapter" id="ch7">
+            <div class="chapter-badge">第 7 章</div>
+            <h2>列表与元组</h2>
+            <div class="chapter-body">
+                <p>列表和元组都是有序的数据集合，但列表可修改，元组不可修改。</p>
+
+                <h3>📋 列表（List）</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>list.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 创建列表
+fruits = ["苹果", "香蕉", "橙子", "葡萄"]
+
+# 访问元素（索引从0开始）
+print(fruits[0])    # 苹果
+print(fruits[-1])   # 葡萄（最后一个）
+
+# 切片
+print(fruits[1:3])  # ['香蕉', '橙子']
+
+# 常用操作
+fruits.append("芒果")      # 添加元素
+fruits.insert(1, "草莓")   # 在索引1处插入
+fruits.remove("香蕉")      # 删除指定元素
+fruits.sort()              # 排序
+
+# 列表推导式
+numbers = [1, 2, 3, 4, 5]
+squares = [n ** 2 for n in numbers]
+print(squares)  # [1, 4, 9, 16, 25]</code></pre>
+                </div>
+
+                <h3>🔒 元组（Tuple）</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>tuple.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 创建元组（不可修改）
+colors = ("红", "绿", "蓝")
+
+# 访问元素
+print(colors[0])   # 红
+print(colors[1:])  # ('绿', '蓝')
+
+# 元组解包
+r, g, b = colors
+print(f"R:{r} G:{g} B:{b}")  # R:红 G:绿 B:蓝</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch6" class="nav-prev">← 上一章：函数</a>
+                <a href="#ch8" class="nav-next">下一章：字典与集合 →</a>
+            </div>
+        </section>
+
+        <!-- 第8章 -->
+        <section class="chapter" id="ch8">
+            <div class="chapter-badge">第 8 章</div>
+            <h2>字典与集合</h2>
+            <div class="chapter-body">
+                <p>字典是键值对的集合，集合是无序不重复元素的集合。</p>
+
+                <h3>📖 字典（Dict）</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>dict.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 创建字典
+student = {
+    "name": "慧妍",
+    "age": 20,
+    "city": "韶关",
+    "hobbies": ["旅游", "拍照", "运动"]
+}
+
+# 访问值
+print(student["name"])         # 慧妍
+print(student.get("age"))      # 20
+
+# 添加/修改
+student["email"] = "test@qq.com"
+student["age"] = 21
+
+# 遍历
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# 字典推导式
+squares = {x: x**2 for x in range(1, 6)}
+print(squares)  # {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</code></pre>
+                </div>
+
+                <h3>🎯 集合（Set）</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>set.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 创建集合（自动去重）
+nums = {1, 2, 3, 3, 4, 4, 5}
+print(nums)  # {1, 2, 3, 4, 5}
+
+# 集合运算
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+print(a | b)  # {1, 2, 3, 4, 5, 6} 并集
+print(a & b)  # {3, 4}              交集
+print(a - b)  # {1, 2}              差集</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch7" class="nav-prev">← 上一章：列表与元组</a>
+                <a href="#ch9" class="nav-next">下一章：字符串操作 →</a>
+            </div>
+        </section>
+
+        <!-- 第9章 -->
+        <section class="chapter" id="ch9">
+            <div class="chapter-badge">第 9 章</div>
+            <h2>字符串操作</h2>
+            <div class="chapter-body">
+                <p>字符串是 Python 中最常用的数据类型之一，提供了丰富的操作方法。</p>
+
+                <h3>✂️ 字符串切片与拼接</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>string.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">s = "Hello, Python!"
+
+# 索引和切片
+print(s[0])       # H
+print(s[-1])      # !
+print(s[7:13])    # Python
+print(s[::-1])    # !nohtyP ,olleH（反转）
+
+# 拼接
+first = "Hello"
+second = "World"
+print(first + " " + second)  # Hello World
+
+# f-string 格式化（推荐）
+name = "慧妍"
+age = 20
+print(f"我叫{name}，今年{age}岁")</code></pre>
+                </div>
+
+                <h3>🛠️ 常用字符串方法</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>str_methods.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python">text = "  Hello, Python World!  "
+
+print(text.strip())       # 去除首尾空格
+print(text.lower())       # 转小写
+print(text.upper())       # 转大写
+print(text.replace("World", "世界"))  # 替换
+print(text.split(","))    # 按逗号分割
+print("Python" in text)   # True（包含判断）
+print(text.count("l"))    # 2（统计出现次数）
+print(len(text))          # 27（字符串长度）</code></pre>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch8" class="nav-prev">← 上一章：字典与集合</a>
+                <a href="#ch10" class="nav-next">下一章：文件操作 →</a>
+            </div>
+        </section>
+
+        <!-- 第10章 -->
+        <section class="chapter" id="ch10">
+            <div class="chapter-badge">第 10 章</div>
+            <h2>文件操作</h2>
+            <div class="chapter-body">
+                <p>文件操作是编程中常见的任务，Python 提供了简单易用的文件处理方式。</p>
+
+                <h3>📝 写入文件</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>write_file.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 写入文件（会覆盖原内容）
+with open("test.txt", "w", encoding="utf-8") as f:
+    f.write("Hello, Python!\n")
+    f.write("这是第二行\n")
+
+# 追加内容
+with open("test.txt", "a", encoding="utf-8") as f:
+    f.write("这是追加的内容\n")</code></pre>
+                </div>
+
+                <h3>📖 读取文件</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>read_file.py</span>
+                        <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                    </div>
+                    <pre><code class="language-python"># 读取整个文件
+with open("test.txt", "r", encoding="utf-8") as f:
+    content = f.read()
+    print(content)
+
+# 逐行读取
+with open("test.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        print(line.strip())</code></pre>
+                </div>
+
+                <h3>🎉 恭喜你！</h3>
+                <div class="congrats-box">
+                    <p>🎊 你已经完成了 Python 基础学习的全部 10 个章节！</p>
+                    <p>接下来建议：</p>
+                    <ul>
+                        <li>多动手练习，尝试写小程序</li>
+                        <li>学习面向对象编程（类和对象）</li>
+                        <li>探索第三方库（如 requests、pandas、numpy）</li>
+                        <li>尝试做一个小项目（如计算器、待办事项）</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="chapter-nav">
+                <a href="#ch9" class="nav-prev">← 上一章：字符串操作</a>
+                <a href="index.html" class="nav-next">🏠 返回首页</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 回到顶部按钮 -->
+    <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+    <script src="python.js"></script>
+</body>
+</html>
