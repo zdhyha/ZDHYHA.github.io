@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的游戏世界 - 郑慧妍</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">🎮 我的游戏世界</h1>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="content">
+        <!-- 头部介绍 -->
+        <section class="game-hero">
+            <div class="game-hero-content">
+                <h2>游戏是我的快乐源泉 ✨</h2>
+                <p>喜欢在虚拟世界中探索、挑战、和朋友一起开黑。每一场游戏都是一次新的冒险！</p>
+                <div class="game-stats">
+                    <div class="game-stat">
+                        <span class="game-stat-number">🎮</span>
+                        <span class="game-stat-label">王者荣耀</span>
+                    </div>
+                    <div class="game-stat">
+                        <span class="game-stat-number">🏆</span>
+                        <span class="game-stat-label">胜利截图</span>
+                    </div>
+                    <div class="game-stat">
+                        <span class="game-stat-number">🔥</span>
+                        <span class="game-stat-label">热爱不减</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 王者荣耀 -->
+        <section class="game-section">
+            <h2>⚔️ 王者荣耀</h2>
+            <p class="game-desc">5v5公平竞技手游，和朋友一起峡谷开黑，享受团战的快感！</p>
+            <div class="game-gallery">
+                <div class="game-card">
+                    <img src="images/game1.jpg" alt="王者荣耀胜利截图">
+                    <div class="game-card-info">
+                        <span class="game-result win">🏆 胜利</span>
+                        <span class="game-detail">5v5匹配 · 17:00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 游戏格言 -->
+        <section class="game-quote">
+            <div class="quote-content">
+                <p class="quote-text">"游戏不是为了赢，而是为了享受和朋友一起战斗的过程。"</p>
+                <p class="quote-author">—— 慧妍的游戏哲学 💜</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+    <script>
+        // 回到顶部
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

@@ -294,6 +294,19 @@ section h2::after {
     line-height: 1.6;
 }
 
+.card-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #e8789a;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.hobby-card:hover .card-link {
+    color: #d06080;
+}
+
 /* ===== 追剧清单部分 ===== */
 .drama-section {
     background: linear-gradient(135deg, #f5f0ff 0%, #fff0f5 100%);
