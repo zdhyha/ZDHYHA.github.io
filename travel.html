@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的旅行日记 - 郑慧妍</title>
+    <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">✈️ 我的旅行日记</h1>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="content">
+        <!-- 头部 -->
+        <section class="travel-hero">
+            <div class="travel-hero-content">
+                <h2>世界那么大，我想去看看 🌍</h2>
+                <p>每一次旅行都是一段新的故事，用脚步丈量世界，用心灵感受美好。</p>
+                <div class="travel-stats">
+                    <div class="travel-stat">
+                        <span class="travel-stat-number">🏔️</span>
+                        <span class="travel-stat-label">自然风光</span>
+                    </div>
+                    <div class="travel-stat">
+                        <span class="travel-stat-number">🏛️</span>
+                        <span class="travel-stat-label">历史人文</span>
+                    </div>
+                    <div class="travel-stat">
+                        <span class="travel-stat-number">🐠</span>
+                        <span class="travel-stat-label">海洋世界</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 旅行足迹 -->
+        <section class="travel-list">
+            <h2>我的旅行足迹</h2>
+            <div class="travel-grid">
+                <div class="travel-card">
+                    <img src="images/travel1.jpg" alt="长沙橘子洲">
+                    <div class="travel-card-info">
+                        <h3>长沙橘子洲</h3>
+                        <span class="travel-location">📍 湖南·长沙</span>
+                        <span class="travel-tag">🏛️ 历史人文</span>
+                    </div>
+                </div>
+                <div class="travel-card">
+                    <img src="images/travel2.jpg" alt="韶关丹霞山">
+                    <div class="travel-card-info">
+                        <h3>韶关丹霞山</h3>
+                        <span class="travel-location">📍 广东·韶关</span>
+                        <span class="travel-tag">🏔️ 世界遗产</span>
+                    </div>
+                </div>
+                <div class="travel-card">
+                    <img src="images/travel3.jpg" alt="韶关风采楼">
+                    <div class="travel-card-info">
+                        <h3>韶关风采楼</h3>
+                        <span class="travel-location">📍 广东·韶关</span>
+                        <span class="travel-tag">🌃 城市夜景</span>
+                    </div>
+                </div>
+                <div class="travel-card">
+                    <img src="images/travel4.jpg" alt="海洋馆">
+                    <div class="travel-card-info">
+                        <h3>海洋馆</h3>
+                        <span class="travel-location">📍 鲸鲨奇观</span>
+                        <span class="travel-tag">🐠 海洋世界</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 旅行格言 -->
+        <section class="travel-quote">
+            <div class="quote-content">
+                <p class="quote-text">"旅行不是为了到达目的地，而是为了享受沿途的风景和心情。"</p>
+                <p class="quote-author">—— 慧妍的旅行感悟 ✈️</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
