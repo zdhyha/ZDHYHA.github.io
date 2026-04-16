@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的摄影集 - 郑慧妍</title>
+    <link rel="stylesheet" href="photo.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">📸 我的摄影集</h1>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="content">
+        <!-- 头部 -->
+        <section class="photo-hero">
+            <div class="photo-hero-content">
+                <h2>用镜头记录美好 🌸</h2>
+                <p>生活中的每一个瞬间都值得被记住，用照片留住那些闪光的时刻。</p>
+                <div class="photo-stats">
+                    <div class="photo-stat">
+                        <span class="photo-stat-number">📷</span>
+                        <span class="photo-stat-label">美食摄影</span>
+                    </div>
+                    <div class="photo-stat">
+                        <span class="photo-stat-number">🌿</span>
+                        <span class="photo-stat-label">生活记录</span>
+                    </div>
+                    <div class="photo-stat">
+                        <span class="photo-stat-number">✨</span>
+                        <span class="photo-stat-label">发现美好</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 照片墙 -->
+        <section class="photo-gallery">
+            <h2>我的照片墙</h2>
+            <div class="photo-grid">
+                <div class="photo-card">
+                    <img src="images/photo1.jpg" alt="蓝莓">
+                    <div class="photo-card-info">
+                        <h3>蓝莓</h3>
+                        <span class="photo-tag">🍎 水果摄影</span>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/photo2.jpg" alt="樱桃">
+                    <div class="photo-card-info">
+                        <h3>樱桃</h3>
+                        <span class="photo-tag">🍒 水果摄影</span>
+                    </div>
+                </div>
+                <div class="photo-card">
+                    <img src="images/photo3.jpg" alt="草莓">
+                    <div class="photo-card-info">
+                        <h3>草莓</h3>
+                        <span class="photo-tag">🍓 水果摄影</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 摄影格言 -->
+        <section class="photo-quote">
+            <div class="quote-content">
+                <p class="quote-text">"摄影是用心去感受世界，用镜头去讲述故事。"</p>
+                <p class="quote-author">—— 慧妍的摄影心得 📷</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
