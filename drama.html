@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>追剧清单 - 郑慧妍</title>
+    <link rel="stylesheet" href="drama.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">🎬 追剧清单</h1>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="content">
+        <!-- 头部介绍 -->
+        <section class="drama-hero">
+            <div class="drama-hero-content">
+                <h2>追剧是我的快乐时光 🍿</h2>
+                <p>喜欢追各种类型的剧集和综艺，感受不同的故事和情感。每一部好剧都值得被记住！</p>
+                <div class="drama-stats">
+                    <div class="drama-stat">
+                        <span class="drama-stat-number">📺</span>
+                        <span class="drama-stat-label">古装仙侠</span>
+                    </div>
+                    <div class="drama-stat">
+                        <span class="drama-stat-number">🎤</span>
+                        <span class="drama-stat-label">音乐综艺</span>
+                    </div>
+                    <div class="drama-stat">
+                        <span class="drama-stat-number">🏕️</span>
+                        <span class="drama-stat-label">户外综艺</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 追剧清单 -->
+        <section class="drama-list">
+            <h2>我的追剧清单</h2>
+            <div class="drama-grid">
+                <div class="drama-card">
+                    <img src="images/drama1.jpg" alt="大梦归离">
+                    <div class="drama-card-info">
+                        <h3>大梦归离</h3>
+                        <span class="drama-tag">古装仙侠</span>
+                    </div>
+                </div>
+                <div class="drama-card">
+                    <img src="images/rap1.jpg" alt="中国说唱巅峰对决">
+                    <div class="drama-card-info">
+                        <h3>中国说唱巅峰对决</h3>
+                        <span class="drama-tag">音乐综艺</span>
+                    </div>
+                </div>
+                <div class="drama-card">
+                    <img src="images/camping.jpg" alt="地球超新鲜">
+                    <div class="drama-card-info">
+                        <h3>地球超新鲜</h3>
+                        <span class="drama-tag">户外综艺</span>
+                    </div>
+                </div>
+                <div class="drama-card">
+                    <img src="images/drama2.jpg" alt="月鳞绮纪">
+                    <div class="drama-card-info">
+                        <h3>月鳞绮纪</h3>
+                        <span class="drama-tag">古装仙侠</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 追剧格言 -->
+        <section class="drama-quote">
+            <div class="quote-content">
+                <p class="quote-text">"好的故事让人沉浸其中，感受不同的人生百态。"</p>
+                <p class="quote-author">—— 慧妍的追剧感悟 💜</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 回到顶部 -->
+    <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
+
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            btn.classList.toggle('visible', window.scrollY > 400);
+        });
+        btn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
