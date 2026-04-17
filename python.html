@@ -814,6 +814,44 @@ with open("test.txt", "r", encoding="utf-8") as f:
     <!-- 回到顶部按钮 -->
     <button class="back-to-top" id="backToTop" title="回到顶部">↑</button>
 
+    <!-- 悬浮Python代码运行器 -->
+    <div class="code-runner" id="codeRunner">
+        <div class="runner-header" id="runnerHeader">
+            <span class="runner-title">🐍 Python 代码运行器</span>
+            <div class="runner-controls">
+                <button class="runner-btn" id="runnerMinimize" title="最小化">−</button>
+                <button class="runner-btn runner-close" id="runnerClose" title="关闭">×</button>
+            </div>
+        </div>
+        <div class="runner-body" id="runnerBody">
+            <div class="runner-editor">
+                <div class="editor-header">
+                    <span>📝 代码编辑区</span>
+                    <button class="clear-btn" id="clearCode">清空</button>
+                </div>
+                <textarea id="codeInput" placeholder="# 在这里输入 Python 代码...&#10;print('Hello, Python!')"></textarea>
+            </div>
+            <div class="runner-actions">
+                <button class="run-btn" id="runCode">
+                    <span class="run-icon">▶</span> 运行代码
+                </button>
+                <span class="runner-status" id="runnerStatus"></span>
+            </div>
+            <div class="runner-output">
+                <div class="output-header">
+                    <span>📤 输出结果</span>
+                    <button class="clear-btn" id="clearOutput">清空</button>
+                </div>
+                <pre id="codeOutput"><span class="output-placeholder">运行代码后，输出结果将显示在这里...</span></pre>
+            </div>
+        </div>
+        <div class="runner-toggle" id="runnerToggle" style="display:none">
+            <span>🐍</span>
+        </div>
+    </div>
+
+    <!-- Pyodide -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
     <script src="python.js"></script>
 </body>
 </html>
