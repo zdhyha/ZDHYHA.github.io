@@ -189,85 +189,37 @@ section h2::after {
     margin-bottom: 30px;
 }
 
-.course-features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
+/* iframe 容器 */
+.course-iframe-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    border: 2px solid rgba(72, 187, 120, 0.2);
 }
 
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: white;
-    padding: 12px 20px;
-    border-radius: 30px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(72, 187, 120, 0.2);
-    transition: transform 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: translateY(-3px);
-}
-
-.feature-icon {
-    font-size: 1.3rem;
-}
-
-.feature-text {
-    color: #4a5568;
-    font-weight: 500;
-}
-
-.course-chapters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.chapter-badge {
-    background: white;
-    color: #48bb78;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    border: 1px solid rgba(72, 187, 120, 0.3);
-    transition: all 0.3s ease;
-}
-
-.chapter-badge:first-child {
-    background: linear-gradient(135deg, #48bb78, #38a169);
-    color: white;
+.course-iframe {
+    width: 100%;
+    height: 100%;
     border: none;
 }
 
-.chapter-badge:hover {
-    background: #48bb78;
-    color: white;
-    transform: scale(1.05);
+.iframe-tip {
+    font-size: 0.9rem;
+    color: #718096;
 }
 
-.course-btn {
-    display: inline-block;
-    background: linear-gradient(135deg, #48bb78, #38a169);
-    color: white;
-    padding: 16px 40px;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: bold;
+.iframe-link {
+    color: #48bb78;
+    font-weight: 600;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
-    transition: all 0.3s ease;
 }
 
-.course-btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+.iframe-link:hover {
+    text-decoration: underline;
 }
 
 /* ===== 关于我部分 ===== */
