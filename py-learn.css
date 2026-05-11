@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    color: #2d3748;
+    background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 50%, #ebf8ff 100%);
+}
+
+/* ===== 导航栏 ===== */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(56, 161, 105, 0.3);
+}
+
+.nav-back {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-back:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* ===== 主内容 ===== */
+.content {
+    margin-top: 60px;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== 课程介绍 ===== */
+.course-intro-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(56, 161, 105, 0.1);
+    border: 2px solid rgba(72, 187, 120, 0.15);
+}
+
+.course-intro-section h2 {
+    font-size: 2rem;
+    color: #276749;
+    margin-bottom: 15px;
+}
+
+.course-intro-section p {
+    font-size: 1.1rem;
+    color: #4a5568;
+}
+
+/* ===== 课程章节 ===== */
+.chapters-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(56, 161, 105, 0.1);
+    border: 2px solid rgba(72, 187, 120, 0.15);
+}
+
+.chapters-section h3 {
+    font-size: 1.3rem;
+    color: #276749;
+    margin-bottom: 20px;
+}
+
+.chapters-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.chapter-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    color: #4a5568;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.chapter-btn:hover {
+    border-color: #48bb78;
+    background: #f0fff4;
+}
+
+.chapter-btn.active {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    border-color: transparent;
+}
+
+.chapter-btn .time {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* ===== 章节内容 ===== */
+.chapter-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(56, 161, 105, 0.1);
+    border: 2px solid rgba(72, 187, 120, 0.15);
+}
+
+.chapter-content h1 {
+    font-size: 2rem;
+    color: #276749;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #48bb78;
+}
+
+.chapter-content h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin: 30px 0 15px;
+}
+
+.chapter-content h3 {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin: 20px 0 10px;
+}
+
+.chapter-content p {
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+.chapter-content ul, .chapter-content ol {
+    margin: 15px 0 15px 25px;
+    color: #4a5568;
+}
+
+.chapter-content li {
+    margin-bottom: 8px;
+}
+
+/* ===== 导学框 ===== */
+.guide-box {
+    background: linear-gradient(135deg, #f0fff4, #e6fffa);
+    border-left: 4px solid #48bb78;
+    padding: 20px;
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 25px;
+}
+
+.guide-box h3 {
+    margin-top: 0;
+    color: #276749;
+}
+
+.guide-box p {
+    margin-bottom: 0;
+}
+
+/* ===== 表格 ===== */
+.feature-table, .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature-table th, .summary-table th {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    padding: 14px 18px;
+    text-align: left;
+}
+
+.feature-table td, .summary-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #e2e8f0;
+    background: white;
+}
+
+.feature-table tr:last-child td, .summary-table tr:last-child td {
+    border-bottom: none;
+}
+
+.feature-table tr:hover td, .summary-table tr:hover td {
+    background: #f7fafc;
+}
+
+/* ===== 代码块 ===== */
+.code-block {
+    background: #1e1e2e;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: #2d2d3d;
+    color: #a0aec0;
+    font-size: 0.85rem;
+}
+
+.copy-btn {
+    background: transparent;
+    border: 1px solid #4a5568;
+    color: #a0aec0;
+    padding: 4px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    border-color: #48bb78;
+    color: #48bb78;
+}
+
+.code-block pre {
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* ===== 链接卡片 ===== */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.link-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f7fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover {
+    border-color: #48bb78;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.15);
+}
+
+.link-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.link-card span {
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.link-card small {
+    color: #718096;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* ===== 用途网格 ===== */
+.usage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.usage-item {
+    text-align: center;
+    padding: 25px 15px;
+    background: linear-gradient(135deg, #f0fff4, #e6fffa);
+    border-radius: 16px;
+    border: 1px solid rgba(72, 187, 120, 0.2);
+}
+
+.usage-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.usage-item h4 {
+    color: #276749;
+    margin-bottom: 5px;
+}
+
+.usage-item p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* ===== 练习框 ===== */
+.practice-box {
+    background: linear-gradient(135deg, #faf5ff, #fef3c7);
+    border: 2px solid #d69e2e;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.practice-box h3 {
+    color: #975a16;
+    margin-bottom: 15px;
+}
+
+.practice-box ol {
+    margin-left: 20px;
+}
+
+.practice-box li {
+    margin-bottom: 10px;
+    color: #4a5568;
+}
+
+/* ===== 章节导航 ===== */
+.chapter-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #e2e8f0;
+}
+
+.next-btn {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.3);
+}
+
+/* ===== 回到顶部 ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 800;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(72, 187, 120, 0.5);
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 15px;
+    }
+
+    .chapter-content {
+        padding: 25px;
+    }
+
+    .course-intro-section h2, .chapter-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .chapters-list {
+        grid-template-columns: 1fr;
+    }
+}
