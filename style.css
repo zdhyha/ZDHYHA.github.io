@@ -162,6 +162,114 @@ section h2::after {
     font-size: 0.9rem;
 }
 
+/* ===== Python 新手入门课程 ===== */
+.python-course-section {
+    background: linear-gradient(135deg, #e6fffa 0%, #ebf8ff 50%, #faf5ff 100%);
+    margin: 50px auto;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 8px 30px rgba(72, 187, 120, 0.1);
+    border: 2px solid rgba(72, 187, 120, 0.15);
+    text-align: center;
+}
+
+.python-course-section h2 {
+    color: #276749;
+    margin-bottom: 15px;
+}
+
+.python-course-section h2::after {
+    content: '♡ ♡ ♡';
+    color: #48bb78;
+}
+
+.course-intro {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+.course-features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(72, 187, 120, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    font-size: 1.3rem;
+}
+
+.feature-text {
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.course-chapters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.chapter-badge {
+    background: white;
+    color: #48bb78;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(72, 187, 120, 0.3);
+    transition: all 0.3s ease;
+}
+
+.chapter-badge:first-child {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    border: none;
+}
+
+.chapter-badge:hover {
+    background: #48bb78;
+    color: white;
+    transform: scale(1.05);
+}
+
+.course-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(72, 187, 120, 0.3);
+    transition: all 0.3s ease;
+}
+
+.course-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(72, 187, 120, 0.4);
+}
+
 /* ===== 关于我部分 ===== */
 .about-section {
     background: white;
