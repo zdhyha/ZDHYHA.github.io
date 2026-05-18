@@ -46,12 +46,20 @@
             <p>我是一个心地善良、活泼开朗、精力旺盛的女生。来自广东韶关，喜欢探索新事物，享受生活的每一刻。</p>
             <div class="personal-stats">
                 <div class="stat-item">
-                    <span class="stat-number">20+</span>
-                    <span class="stat-label">爱好</span>
+                    <span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">兴趣爱好</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">100+</span>
+                    <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
                     <span class="stat-label">美食尝试</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">座</span>
+                    <span class="stat-label">旅行城市</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">追剧清单</span>
                 </div>
             </div>
         </div>
@@ -188,6 +196,65 @@
             <div class="food-item">
                 <img src="images/pasta.jpg" alt="西餐意面">
                 <h3>西餐意面 🍝</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 留言板 -->
+    <section class="message-section">
+        <h2>💬 留言板</h2>
+        <p class="message-intro">欢迎给我留言，说说你的想法吧~</p>
+        <div class="message-form">
+            <div class="form-row">
+                <input type="text" id="msgName" class="msg-input" placeholder="你的昵称 ✏️" maxlength="20">
+                <select id="msgEmoji" class="msg-select">
+                    <option value="😊">😊 开心</option>
+                    <option value="😍">😍 喜欢</option>
+                    <option value="👍">👍 点赞</option>
+                    <option value="🎉">🎉 祝福</option>
+                    <option value="💪">💪 加油</option>
+                    <option value="🌸">🌸 美丽</option>
+                    <option value="⭐">⭐ 星星</option>
+                    <option value="🌈">🌈 彩虹</option>
+                </select>
+            </div>
+            <textarea id="msgContent" class="msg-textarea" placeholder="写下你想说的话..." maxlength="200"></textarea>
+            <div class="form-footer">
+                <span class="char-count"><span id="charCount">0</span>/200</span>
+                <button class="msg-submit" onclick="submitMessage()">发送留言 🚀</button>
+            </div>
+        </div>
+        <div class="message-list" id="messageList">
+            <!-- 预置留言 -->
+            <div class="message-item">
+                <div class="message-avatar">🌸</div>
+                <div class="message-body">
+                    <div class="message-header">
+                        <span class="message-name">慧妍</span>
+                        <span class="message-time">2026-04-16</span>
+                    </div>
+                    <p class="message-text">欢迎来到我的个人主页！希望你能喜欢~ 💕</p>
+                </div>
+            </div>
+            <div class="message-item">
+                <div class="message-avatar">⭐</div>
+                <div class="message-body">
+                    <div class="message-header">
+                        <span class="message-name">访客小星星</span>
+                        <span class="message-time">2026-04-17</span>
+                    </div>
+                    <p class="message-text">主页做得好漂亮呀！加油！💪</p>
+                </div>
+            </div>
+            <div class="message-item">
+                <div class="message-avatar">🌈</div>
+                <div class="message-body">
+                    <div class="message-header">
+                        <span class="message-name">路过的朋友</span>
+                        <span class="message-time">2026-04-18</span>
+                    </div>
+                    <p class="message-text">韶关丹霞山超美的！同为韶关人感到骄傲 🏔️</p>
+                </div>
             </div>
         </div>
     </section>
