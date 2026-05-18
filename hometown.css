@@ -1,0 +1,371 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    color: #2d3748;
+    background: linear-gradient(135deg, #fff5f0 0%, #fff9f5 50%, #fef5f0 100%);
+}
+
+/* ===== 导航栏 ===== */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(135deg, #e07a5f 0%, #f4a261 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(224, 122, 95, 0.3);
+}
+
+.nav-back {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.nav-back:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.nav-title {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* ===== 主内容 ===== */
+.content {
+    margin-top: 60px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Hero区域 ===== */
+.hometown-hero {
+    text-align: center;
+    padding: 50px 30px;
+    background: linear-gradient(135deg, #fff5f0, #ffe8e0);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(224, 122, 95, 0.1);
+    border: 2px solid rgba(224, 122, 95, 0.15);
+}
+
+.hometown-hero h2 {
+    font-size: 2.5rem;
+    color: #c75b39;
+    margin-bottom: 10px;
+}
+
+.hometown-subtitle {
+    font-size: 1.2rem;
+    color: #e07a5f;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.hometown-intro {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hometown-intro p {
+    color: #6b7280;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* ===== 城市名片 ===== */
+.city-card-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(224, 122, 95, 0.08);
+    border: 2px solid rgba(224, 122, 95, 0.1);
+}
+
+.city-card-section h3 {
+    font-size: 1.3rem;
+    color: #c75b39;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.city-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.city-card {
+    text-align: center;
+    padding: 20px 15px;
+    background: linear-gradient(135deg, #fff9f5, #fff5f0);
+    border-radius: 16px;
+    border: 2px solid rgba(224, 122, 95, 0.12);
+    transition: all 0.3s ease;
+}
+
+.city-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(224, 122, 95, 0.15);
+}
+
+.card-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-bottom: 5px;
+}
+
+.card-value {
+    display: block;
+    font-weight: 600;
+    color: #c75b39;
+}
+
+/* ===== 景点区域 ===== */
+.attractions-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(224, 122, 95, 0.08);
+    border: 2px solid rgba(224, 122, 95, 0.1);
+}
+
+.attractions-section h3 {
+    font-size: 1.3rem;
+    color: #c75b39;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.attraction-card {
+    background: linear-gradient(135deg, #fff9f5, #fff5f0);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid rgba(224, 122, 95, 0.1);
+    transition: all 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(224, 122, 95, 0.15);
+}
+
+.attraction-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+.attraction-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover .attraction-img img {
+    transform: scale(1.1);
+}
+
+.attraction-info {
+    padding: 20px;
+}
+
+.attraction-info h4 {
+    color: #c75b39;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.attraction-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, #e07a5f, #f4a261);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+}
+
+.attraction-info > p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+.attraction-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.attraction-highlights span {
+    background: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #e07a5f;
+    border: 1px solid rgba(224, 122, 95, 0.2);
+}
+
+/* ===== 美食区域 ===== */
+.food-section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(224, 122, 95, 0.08);
+    border: 2px solid rgba(224, 122, 95, 0.1);
+}
+
+.food-section h3 {
+    font-size: 1.3rem;
+    color: #c75b39;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.food-item {
+    text-align: center;
+    padding: 25px 20px;
+    background: linear-gradient(135deg, #fff9f5, #fff5f0);
+    border-radius: 16px;
+    border: 2px solid rgba(224, 122, 95, 0.1);
+    transition: all 0.3s ease;
+}
+
+.food-item:hover {
+    transform: translateY(-5px) rotate(2deg);
+    box-shadow: 0 8px 25px rgba(224, 122, 95, 0.12);
+}
+
+.food-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.food-item h4 {
+    color: #c75b39;
+    margin-bottom: 8px;
+}
+
+.food-item p {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+/* ===== 家乡寄语 ===== */
+.hometown-quote {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.quote-box {
+    background: linear-gradient(135deg, #fff5f0, #ffe8e0);
+    border-radius: 20px;
+    padding: 40px;
+    border: 2px dashed rgba(224, 122, 95, 0.25);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote-box p {
+    font-size: 1.3rem;
+    color: #9a6a5a;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.quote-author {
+    color: #e07a5f;
+    font-weight: 600;
+}
+
+/* ===== 回到顶部 ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #e07a5f, #c75b39);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(224, 122, 95, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 800;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(224, 122, 95, 0.5);
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 15px;
+    }
+
+    .hometown-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .attractions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .city-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
