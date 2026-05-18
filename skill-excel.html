@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel高级应用 - 郑慧妍</title>
+    <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">📋 Excel高级应用</h1>
+    </nav>
+
+    <main class="content">
+        <section class="skill-hero">
+            <h2>Excel 高级应用能力 📋</h2>
+            <p>Excel 是数据分析最基础也最强大的工具，掌握高级技巧能大幅提升工作效率。</p>
+        </section>
+
+        <section class="skill-section">
+            <h3>⚡ 掌握的高级功能</h3>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🔢</div>
+                    <h4>常用函数</h4>
+                    <p>VLOOKUP、INDEX-MATCH、SUMIFS、COUNTIFS、IF嵌套、TEXT、DATE 等常用函数组合使用。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h4>数据透视表</h4>
+                    <p>熟练使用数据透视表进行多维数据分析，支持切片器、日程表等交互功能。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h4>条件格式</h4>
+                    <p>使用数据条、色阶、图标集、自定义规则等条件格式，让数据一目了然。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h4>图表制作</h4>
+                    <p>制作柱状图、折线图、饼图、组合图等专业图表，掌握图表美化技巧。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔒</div>
+                    <h4>数据验证</h4>
+                    <p>设置下拉菜单、输入限制、自定义提示，确保数据录入的准确性。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h4>VBA宏</h4>
+                    <p>编写 VBA 宏实现自动化操作，批量处理重复性工作，大幅提升效率。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>⭐ 实用技巧</h3>
+            <div class="tips-list">
+                <div class="tip-item">
+                    <span class="tip-badge">快捷键</span>
+                    <div class="tip-content">
+                        <h4>Ctrl+E 快速填充</h4>
+                        <p>自动识别模式并填充数据，比公式更快捷！例如提取姓名、拆分日期等。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-badge">技巧</span>
+                    <div class="tip-content">
+                        <h4>INDEX-MATCH 替代 VLOOKUP</h4>
+                        <p>更灵活、更快速，支持双向查找，不受列顺序限制。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-badge">技巧</span>
+                    <div class="tip-content">
+                        <h4>数据透视表 + 切片器</h4>
+                        <p>实现交互式数据分析，一键切换不同维度的数据视图。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <span class="tip-badge">公式</span>
+                    <div class="tip-content">
+                        <h4>SUMIFS 多条件求和</h4>
+                        <p>=SUMIFS(求和区域, 条件区域1, 条件1, 条件区域2, 条件2) 轻松实现多维度汇总。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>💡 常用公式速查</h3>
+            <div class="formula-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>功能</th>
+                            <th>公式</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>多条件查找</td>
+                            <td><code>=INDEX(返回列, MATCH(1, (条件1列=条件1)*(条件2列=条件2), 0))</code></td>
+                        </tr>
+                        <tr>
+                            <td>多条件求和</td>
+                            <td><code>=SUMIFS(求和列, 条件列1, 条件1, 条件列2, 条件2)</code></td>
+                        </tr>
+                        <tr>
+                            <td>多条件计数</td>
+                            <td><code>=COUNTIFS(条件列1, 条件1, 条件列2, 条件2)</code></td>
+                        </tr>
+                        <tr>
+                            <td>提取姓氏</td>
+                            <td><code>=LEFT(A2, 1)</code></td>
+                        </tr>
+                        <tr>
+                            <td>日期转月份</td>
+                            <td><code>=TEXT(A2, "YYYY年MM月")</code></td>
+                        </tr>
+                        <tr>
+                            <td>排名</td>
+                            <td><code>=RANK.EQ(A2, A$2:A$100, 0)</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="skill-quote">
+            <p>"Excel 不只是一个表格工具，它是数据思维的起点。" 💪</p>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>

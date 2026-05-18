@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化 - 郑慧妍</title>
+    <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">📈 数据可视化</h1>
+    </nav>
+
+    <main class="content">
+        <section class="skill-hero">
+            <h2>数据可视化能力 🎨</h2>
+            <p>用图表让数据说话，将复杂的数据转化为直观、美观、有说服力的可视化作品。</p>
+        </section>
+
+        <section class="skill-section">
+            <h3>📊 掌握的图表类型</h3>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">📉</div>
+                    <h4>折线图</h4>
+                    <p>展示数据随时间的变化趋势，适用于时间序列分析、趋势预测。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h4>柱状图</h4>
+                    <p>对比不同类别的数据大小，适用于排名、分组对比分析。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🥧</div>
+                    <h4>饼图</h4>
+                    <p>展示各部分占总体的比例关系，适用于构成分析。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗺️</div>
+                    <h4>散点图</h4>
+                    <p>展示两个变量之间的关系，适用于相关性分析和异常值检测。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔥</div>
+                    <h4>热力图</h4>
+                    <p>用颜色深浅表示数据密度，适用于相关性矩阵、地理分布。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📐</div>
+                    <h4>漏斗图</h4>
+                    <p>展示业务流程各环节的转化率，适用于用户路径分析。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>🛠️ 可视化工具</h3>
+            <div class="tools-list">
+                <div class="tool-item">
+                    <span class="tool-name">Matplotlib</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 80%"></div></div>
+                    <span class="tool-level">熟练</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Seaborn</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 75%"></div></div>
+                    <span class="tool-level">熟练</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Excel 图表</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 90%"></div></div>
+                    <span class="tool-level">精通</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Tableau</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 65%"></div></div>
+                    <span class="tool-level">掌握</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">ECharts</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 60%"></div></div>
+                    <span class="tool-level">了解</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>🎨 可视化设计原则</h3>
+            <div class="principles-grid">
+                <div class="principle-item">
+                    <span class="principle-num">1</span>
+                    <h4>简洁明了</h4>
+                    <p>去除不必要的装饰，让数据本身成为主角</p>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">2</span>
+                    <h4>配色协调</h4>
+                    <p>使用和谐的配色方案，避免过多颜色造成视觉混乱</p>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">3</span>
+                    <h4>突出重点</h4>
+                    <p>用颜色、大小等视觉元素引导读者关注核心信息</p>
+                </div>
+                <div class="principle-item">
+                    <span class="principle-num">4</span>
+                    <h4>讲好故事</h4>
+                    <p>图表应该有清晰的叙事逻辑，引导读者理解数据含义</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>💡 代码示例</h3>
+            <div class="code-block">
+                <div class="code-header">
+                    <span>Python - Matplotlib</span>
+                    <button class="copy-btn" onclick="copyCode(this)">📋 复制</button>
+                </div>
+                <pre><code>import matplotlib.pyplot as plt
+import numpy as np
+
+# 创建数据
+months = ['1月', '2月', '3月', '4月', '5月', '6月']
+sales = [120, 150, 180, 200, 170, 220]
+
+# 绘制折线图
+plt.figure(figsize=(10, 6))
+plt.plot(months, sales, 'o-', color='#e8789a', linewidth=2)
+plt.title('月度销售趋势', fontsize=16)
+plt.xlabel('月份', fontsize=12)
+plt.ylabel('销售额（万元）', fontsize=12)
+plt.grid(True, alpha=0.3)
+plt.show()</code></pre>
+            </div>
+        </section>
+
+        <section class="skill-quote">
+            <p>"好的可视化不是让读者看懂图表，而是让读者看懂数据背后的故事。" 🌟</p>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        function copyCode(b) {
+            const code = b.closest('.code-block').querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                b.textContent = '✅ 已复制';
+                setTimeout(() => { b.textContent = '📋 复制'; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

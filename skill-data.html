@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据分析 - 郑慧妍</title>
+    <link rel="stylesheet" href="skill.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <a href="index.html" class="nav-back">← 返回首页</a>
+        <h1 class="nav-title">📊 数据分析</h1>
+    </nav>
+
+    <main class="content">
+        <section class="skill-hero">
+            <h2>数据分析能力 ✨</h2>
+            <p>作为商务数据分析专业的学生，我掌握从数据采集、清洗、分析到可视化的完整流程。</p>
+        </section>
+
+        <section class="skill-section">
+            <h3>🔍 核心技能</h3>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">📋</div>
+                    <h4>数据采集</h4>
+                    <p>掌握网络爬虫、API接口调用、数据库查询等多种数据获取方式，能够从多渠道收集所需数据。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧹</div>
+                    <h4>数据清洗</h4>
+                    <p>熟练处理缺失值、异常值、重复数据，掌握数据格式转换、标准化等预处理技术。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧮</div>
+                    <h4>统计分析</h4>
+                    <p>掌握描述性统计、假设检验、相关性分析、回归分析等常用统计方法。</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h4>业务洞察</h4>
+                    <p>能够从数据中发现业务问题，提出数据驱动的解决方案，撰写分析报告。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>🛠️ 常用工具</h3>
+            <div class="tools-list">
+                <div class="tool-item">
+                    <span class="tool-name">Python</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 85%"></div></div>
+                    <span class="tool-level">熟练</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Excel</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 90%"></div></div>
+                    <span class="tool-level">精通</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">SQL</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 70%"></div></div>
+                    <span class="tool-level">掌握</span>
+                </div>
+                <div class="tool-item">
+                    <span class="tool-name">Tableau</span>
+                    <div class="tool-bar"><div class="tool-fill" style="width: 65%"></div></div>
+                    <span class="tool-level">掌握</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-section">
+            <h3>📊 分析案例</h3>
+            <div class="case-list">
+                <div class="case-item">
+                    <span class="case-num">01</span>
+                    <div class="case-info">
+                        <h4>电商销售数据分析</h4>
+                        <p>使用 Pandas 对销售数据进行清洗和分析，计算 GMV、客单价、复购率等核心指标。</p>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <span class="case-num">02</span>
+                    <div class="case-info">
+                        <h4>用户行为分析</h4>
+                        <p>通过用户访问日志，分析用户路径、留存率、转化漏斗，优化产品体验。</p>
+                    </div>
+                </div>
+                <div class="case-item">
+                    <span class="case-num">03</span>
+                    <div class="case-info">
+                        <h4>市场调研分析</h4>
+                        <p>设计问卷、收集数据，使用统计方法分析消费者偏好，为营销策略提供依据。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skill-quote">
+            <p>"数据是新时代的石油，而分析能力就是提炼石油的技术。" 💫</p>
+        </section>
+    </main>
+
+    <button class="back-to-top" id="backToTop">↑</button>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 400));
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</body>
+</html>
