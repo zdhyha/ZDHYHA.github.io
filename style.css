@@ -404,6 +404,111 @@ section h2::after {
     color: #8a7a72;
 }
 
+/* ===== 学习技能栏目 ===== */
+.learning-section {
+    background: linear-gradient(135deg, #fff5f7 0%, #ffeef2 50%, #fff0f5 100%);
+    margin: 50px auto;
+    border-radius: 24px;
+    padding: 50px;
+    box-shadow: 0 8px 30px rgba(232, 120, 154, 0.1);
+    border: 2px solid rgba(232, 120, 154, 0.15);
+}
+
+.learning-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.learning-section h2::after {
+    content: '♡ ♡ ♡';
+    display: block;
+    font-size: 1rem;
+    color: #e8789a;
+    margin-top: 5px;
+}
+
+.learning-intro {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 35px;
+    font-size: 1rem;
+}
+
+.learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.learning-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid rgba(232, 120, 154, 0.12);
+    box-shadow: 0 5px 20px rgba(232, 120, 154, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.learning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e8789a, #f4a0b8, #e8789a);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(232, 120, 154, 0.18);
+    border-color: rgba(232, 120, 154, 0.3);
+}
+
+.learning-card:hover::before {
+    transform: scaleX(1);
+}
+
+.learning-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.learning-card h3 {
+    font-size: 1.2rem;
+    color: #d63384;
+    margin-bottom: 10px;
+}
+
+.learning-card p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.learning-link {
+    display: inline-block;
+    color: #e8789a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.learning-card:hover .learning-link {
+    color: #d63384;
+}
+
 /* ===== 兴趣爱好部分 ===== */
 .hobbies-section {
     background: linear-gradient(135deg, #fff9fb 0%, #f5f0ff 100%);
