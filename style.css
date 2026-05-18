@@ -41,6 +41,35 @@ body {
     font-size: 1.1rem;
 }
 
+/* ===== 学校入口 ===== */
+.school-link {
+    position: fixed;
+    top: 20px;
+    right: 170px;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+.school-link:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.school-icon {
+    font-size: 1.1rem;
+}
+
 /* ===== 可爱风 Hero 区域 ===== */
 .hero-section {
     height: 100vh;
